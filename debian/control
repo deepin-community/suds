@@ -1,0 +1,32 @@
+Source: suds
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Scott Talbert <swt@techie.net>,
+           Thomas Goirand <zigo@debian.org>,
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+Build-Depends-Indep: python3-pytest,
+                     python3-six,
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Vcs-Browser: https://salsa.debian.org/python-team/packages/suds
+Vcs-Git: https://salsa.debian.org/python-team/packages/suds.git
+Homepage: https://github.com/suds-community/suds
+
+Package: python3-suds
+Architecture: all
+Depends: python3-pkg-resources,
+         ${misc:Depends},
+         ${python3:Depends},
+Description: Lightweight SOAP client for Python - Python 3.x
+ The suds project is a Python soap web services client lib. Suds leverages
+ Python meta programming to provide an intuitive API for consuming web services.
+ Objectification of types defined in the WSDL is provided without class
+ generation. Programmers rarely need to read the WSDL since services and WSDL
+ based objects can be easily inspected. Supports pluggable soap bindings.
+ Note: this package now uses the Suds fork maintained by Jurko Gospodnetić.
+ .
+ This package provides the Python 3.x module.

@@ -1,0 +1,2 @@
+Tests: python3-suds
+Depends: python3-suds, python3-all, python3-pytest, python3-six

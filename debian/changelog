@@ -1,0 +1,303 @@
+suds (1.0.0-1) unstable; urgency=medium
+
+  * d/watch: Mangle beta versions
+  * Update to new upstream version 1.0.0 (Closes: #997610)
+
+ -- Scott Talbert <swt@techie.net>  Fri, 29 Oct 2021 20:49:26 -0400
+
+suds (0.8.5-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Scott Talbert ]
+  * Update to new upstream version 0.8.5
+  * Update Standards-Version to 4.6.0
+  * Update debhelper-compat to 13
+  * Test supported Python versions vice installed
+
+ -- Scott Talbert <swt@techie.net>  Wed, 18 Aug 2021 14:20:52 -0400
+
+suds (0.8.4-1) unstable; urgency=medium
+
+  [ Bastian Germann ]
+  * New upstream: suds-community (Closes: #923582)
+  * gbp: Remove unnecessary config
+  * Drop all upstream patches
+  * docs: Replace README.{rst->md}
+  * lintian: unused-entry-in-debian-source-include-binaries
+  * lintian: out-of-date-standards-version
+  * lintian: rules-requires-root-missing
+  * Add d/copyright information
+  * New upstream version 0.8.4
+
+ -- Scott Talbert <swt@techie.net>  Sun, 16 Feb 2020 10:35:27 -0500
+
+suds (0.7~git20150727.94664dd-8) unstable; urgency=medium
+
+  * Add fix-FTBFS-in-python-3.8.patch (Closes: #943937).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 01 Nov 2019 14:40:49 +0100
+
+suds (0.7~git20150727.94664dd-7) unstable; urgency=medium
+
+  * d/control: Move to DPMT
+  * d/control: Update Standards Version to 4.4.1
+  * Remove Python 2 subpackages (Closes: #938580)
+
+ -- Scott Talbert <swt@techie.net>  Sun, 06 Oct 2019 22:22:17 -0400
+
+suds (0.7~git20150727.94664dd-6) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+
+  [ Scott Talbert ]
+  * d/control: Update Standards Version to 4.4.0
+  * d/control: Update debhelper version and switch to -compat
+  * d/patches: Add patch to fix tests with pytest 4
+
+ -- Scott Talbert <swt@techie.net>  Tue, 06 Aug 2019 18:11:04 -0400
+
+suds (0.7~git20150727.94664dd-5) unstable; urgency=medium
+
+  * Add six to test dependencies to fix test suite
+
+ -- Scott Talbert <swt@techie.net>  Sun, 25 Feb 2018 22:46:06 -0500
+
+suds (0.7~git20150727.94664dd-4) unstable; urgency=medium
+
+  * Update VCS fields to reflect new location on Salsa
+  * Update URL and dates in copyright file
+  * Update standards version to 4.1.3 - no changes needed
+  * Remove upstream/signing-key.pgp (was for old upstream)
+  * Add a package test suite
+
+ -- Scott Talbert <swt@techie.net>  Fri, 23 Feb 2018 22:34:48 -0500
+
+suds (0.7~git20150727.94664dd-3) unstable; urgency=medium
+
+  * Update standards version
+  * Ensure clean gets rid of everything
+  * Update watch file for new upstream
+  * Rebuild mainly for Ubuntu
+
+ -- Scott Talbert <swt@techie.net>  Wed, 17 Feb 2016 19:34:23 -0500
+
+suds (0.7~git20150727.94664dd-2) unstable; urgency=medium
+
+  [ Scott Talbert ]
+  * Update Vcs URL to canonical one
+  * Add a python3-suds.docs file
+  * Add python-six to the build deps (needed for tests)
+
+  [ Thomas Goirand ]
+  * Ran wrap-and-sort -t -a.
+  * Removed now useless X-Python-Version: >= 2.6 (even Jessie has 2.7).
+  * Removed now useless version in python build-depends (satisfied in Jessie).
+  * Moved python-pytest from build-depends to build-depends-indep.
+  * Added myself as uploader.
+  * Added Python 3 support (Closes: #783029, #810007)
+  * Added extend-diff-ignore = "^[^/]*[.]egg-info/" to d/source/options, and
+    simplyfied dh_auto_clean.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 02 Feb 2016 11:43:26 +0800
+
+suds (0.7~git20150727.94664dd-1) unstable; urgency=low
+
+  * Change upstream URL and add note that package is now using Jurko's fork
+  * Imported Upstream version 0.7~git20150727.94664dd
+  * Add pytest to build-deps so that tests will get run
+  * Use bz2 compression
+  * Update docs files for jurko fork
+  * Remove patches as they've been incorporated upstream
+  * Add patch to fix failing HTTP tests
+  * Fix clean so that it actually cleans up everything
+  * Fix spelling error in changelog
+
+ -- Scott Talbert <swt@techie.net>  Sat, 30 Jan 2016 21:36:30 -0500
+
+suds (0.4.1-18) unstable; urgency=low
+
+  * Remove Mathias Behrle from Uploaders (Closes: #812191)
+  * Update Vcs URLs to new collab-maint ones
+  * Remove deprecation warnings - package is no longer planned to be retired
+  * Add myself to copyright file
+
+ -- Scott Talbert <swt@techie.net>  Thu, 28 Jan 2016 23:28:07 -0500
+
+suds (0.4.1-17) unstable; urgency=medium
+
+  * Transferring maintainership to Scott Talbert.
+    According to the discussions in #783029, #788082, #810007
+    Scott Talbert takes over the maintenance of suds.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 08 Jan 2016 11:47:23 +0100
+
+suds (0.4.1-16) unstable; urgency=medium
+
+  * Using pypi.debian.net redirector in watch file.
+  * Wrapping and sorting control files (wrap-and-sort -bts).
+  * Updating year of debian copyright.
+  * Adapting section naming in gbp.conf to current git-buildpackage.
+  * Adding deprecation warnings for this package (Closes: #783029).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 08 Jun 2015 12:55:30 +0200
+
+suds (0.4.1-15) unstable; urgency=medium
+
+  * Updating to Standards-Version: 3.9.6, no changes needed.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 08 Oct 2014 19:21:37 +0200
+
+suds (0.4.1-14) unstable; urgency=medium
+
+  * Removing accidently doubled option pgpsigurlmangle from watch file.
+  * Improving 02-fix-unsecure-cache-path.patch to remove temporary files
+    on program exit.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 26 May 2014 12:50:37 +0200
+
+suds (0.4.1-13) unstable; urgency=medium
+
+  * Removing  LC_ALL=C.UTF-8 as build environment.
+  * Removing 04-merge-schema.patch, because it introduced errors in
+    namespace detection (Closes: #743415).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 02 Apr 2014 17:24:06 +0200
+
+suds (0.4.1-12) unstable; urgency=medium
+
+  * Updating year in debian copyright.
+  * Removing debian/source/options, we are building with dpkg defaults.
+  * Removing PYBUILD_NAME from rules, it is no more needed.
+  * Adding pgp verification for uscan.
+  * Adding gbp.conf for usage with git-buildpackage.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 11 Mar 2014 17:13:09 +0100
+
+suds (0.4.1-11) unstable; urgency=low
+
+  * Updating to standards version 3.9.5, no changes needed.
+  * Changing to buildsystem pybuild.
+  * Pointing VCS fields to new location on alioth.debian.org.
+  * Using dpkg defaults for xz compression.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 29 Nov 2013 19:04:44 +0100
+
+suds (0.4.1-10) unstable; urgency=low
+
+  * Adding 04-merge-schema.patch. Thanks to Russell Stuart (Closes:
+    #728184).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 04 Nov 2013 18:21:25 +0100
+
+suds (0.4.1-9) unstable; urgency=low
+
+  * Adding 03-fix-timezone-handling.patch (Closes: #714722). Thanks to
+    Artoi Jantunen for providing the patch!
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 02 Jul 2013 13:11:54 +0200
+
+suds (0.4.1-8) unstable; urgency=high
+
+  * Removing needless empty line in rules.
+  * Adding 02-fix-unsecure-cache-path.patch for CVE-2013-2217 (Closes: #714340).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 29 Jun 2013 17:42:55 +0200
+
+suds (0.4.1-7) unstable; urgency=low
+
+  * Removing Daniel from Uploaders. Thanks for your work! (Closes: #704358).
+  * Bumping X-Python-Version to 2.6 (Closes: #708098).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 13 May 2013 14:06:47 +0200
+
+suds (0.4.1-6) experimental; urgency=low
+
+  * Removing obsolete Dm-Upload-Allowed
+  * Updating to Standards-Version: 3.9.4, no changes needed.
+  * Updating Vcs-Git to correct address.
+  * Adding watch file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 24 Feb 2013 14:25:45 +0100
+
+suds (0.4.1-5) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Updating to Standards-Version: 3.9.3, no changes needed.
+  * Updating year in copyright.
+  * Adding Format header for DEP5.
+
+  [ Daniel Baumann ]
+  * Updating maintainers field.
+  * Updating vcs fields.
+  * Switching to xz compression.
+  * Updating to debhelper version 9.
+  * Correcting copyright file to match format version 1.0.
+  * Rediffing remove-makefile.patch with common diff options.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 30 Jun 2012 17:22:44 +0200
+
+suds (0.4.1-4) unstable; urgency=low
+
+  * Correcting package long description (Closes: #652460).
+  * Removing deprecated XB-Python-Version for dh_python2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 20 Dec 2011 13:53:10 +0100
+
+suds (0.4.1-3) experimental; urgency=low
+
+  [ Mathias Behrle ]
+  * Changing my email address.
+  * Updating Copyright.
+  * Updating to standards version 3.9.2.
+
+  [ Daniel Baumann ]
+  * Compacting copyright file.
+  * Compacting copyright file.
+  * Moving to source format 3.0 (quilt).
+
+  [ Mathias Behrle ]
+  * Moving from deprecated python-support to dh_python2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 17 Jul 2011 19:39:00 +0200
+
+suds (0.4.1-2) experimental; urgency=low
+
+  * Switching to source format 3.0 (quilt).
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 12 Nov 2010 14:18:23 +0100
+
+suds (0.4.1-1) experimental; urgency=low
+
+  [ Mathias Behrle ]
+  * Correcting package long description to make lintian happy.
+
+  [ Daniel Baumann ]
+  * Updating to debhelper version 8.
+  * Merging upstream version 0.4.1.
+  * Updating year in copyright file.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 31 Oct 2010 16:10:08 +0100
+
+suds (0.4-1) experimental; urgency=low
+
+  * Updating standards version to 3.9.0.
+  * Merging upstream version 0.4.
+  * Updating standards version to 3.9.1.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 14 Aug 2010 16:28:47 +0200
+
+suds (0.3.9-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Mathias Behrle <mathiasb@mbsolutions.selfip.biz>  Tue, 01 Jun 2010 23:03:02 +0200
